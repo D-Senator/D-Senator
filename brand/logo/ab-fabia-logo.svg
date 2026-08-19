@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" width="520" height="440" role="img" aria-label="AB - FABIA Service Limited logo">
+  <!-- AB - FABIA Service Limited — logo (Concept B: two ascending amber chevrons + wordmark)
+       Colors: Navy #0B1F3A | Steel #6B7A8D | Amber #F5A623 -->
+
+  <!-- Mark: two ascending chevron beams in safety amber -->
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke="#F5A623" stroke-width="15">
+    <!-- lower chevron -->
+    <polyline points="108,96 130,66 152,96"/>
+    <!-- upper (ascending) chevron -->
+    <polyline points="114,76 130,46 146,76"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="130" y="140" text-anchor="middle" font-family="Archivo, 'Archivo Black', Arial, sans-serif" font-weight="800" font-size="44" letter-spacing="1" fill="#0B1F3A">AB - FABIA</text>
+  <text x="130" y="182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="5" fill="#6B7A8D">SERVICE LIMITED</text>
+</svg>

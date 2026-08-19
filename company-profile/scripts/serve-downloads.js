@@ -40,7 +40,7 @@ function indexHtml() {
       <td class="name">${esc(f.label)}</td>
       <td class="desc">${esc(f.desc)}</td>
       <td class="size">${sizeOf(f.file)}</td>
-      <td class="cta"><a href="/download/${encodeURIComponent(f.file)}" download>Download</a></td>
+      <td class="cta">${f.file.endsWith('.html') ? `<a class="ghost" href="/view/${encodeURIComponent(f.file)}">View</a>` : ''}<a href="/download/${encodeURIComponent(f.file)}" download>Download</a></td>
     </tr>`).join('');
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -63,6 +63,7 @@ function indexHtml() {
   td.cta { text-align: right; }
   a { display: inline-block; background: ${AMBER}; color: ${NAVY}; font-weight: 700; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 13px; }
   a:hover { filter: brightness(1.05); }
+  a.ghost { background: transparent; color: #5a6b7c; border: 1px solid #dce3ea; margin-right: 8px; }
   .foot { text-align: center; color: #9aa8b6; font-size: 12px; margin-top: 20px; }
 </style></head>
 <body>
@@ -86,6 +87,18 @@ const server = http.createServer((req, res) => {
   if (url.pathname === '/' || url.pathname === '/index.html') {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     res.end(indexHtml());
+    return;
+  }
+  if (url.pathname.startsWith('/view/')) {
+    const name = decodeURIComponent(url.pathname.slice('/view/'.length));
+    const found = FILES.find(f => f.file === name);
+    if (!found) { res.writeHead(404); res.end('Not found'); return; }
+    const fp = path.join(DIR, name);
+    if (!fp.startsWith(DIR) || !fs.existsSync(fp)) { res.writeHead(404); res.end('Not found'); return; }
+    const ext = path.extname(name).toLowerCase();
+    if (ext !== '.html') { res.writeHead(302, { Location: '/download/' + encodeURIComponent(name) }); res.end(); return; }
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    fs.createReadStream(fp).pipe(res);
     return;
   }
   if (url.pathname.startsWith('/download/')) {

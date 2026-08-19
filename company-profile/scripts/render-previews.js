@@ -4,8 +4,12 @@ const path = require('path');
 const { createCanvas } = require('@napi-rs/canvas');
 const pdfjs = require('pdfjs-dist/legacy/build/pdf.js');
 
-const PDF_PATH = path.join(__dirname, '..', 'ab-fabia-company-profile.pdf');
-const OUT_DIR = path.join(__dirname, '..', 'previews');
+const PDF_PATH = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : path.join(__dirname, '..', 'ab-fabia-company-profile-print.pdf');
+const OUT_DIR = process.argv[3]
+  ? path.resolve(process.argv[3])
+  : path.join(__dirname, '..', 'previews');
 
 class NodeCanvasFactory {
   create(width, height) {
@@ -37,7 +41,8 @@ async function renderPage(page, scale) {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const data = new Uint8Array(fs.readFileSync(PDF_PATH));
   const doc = await pdfjs.getDocument({ data, isEvalSupported: false, disableFontFace: true }).promise;
-  const pages = [1, 2, 7, 9, 21, 29, 33]; // cover, contents, journey, services divider, project, leadership, back cover
+  let pages = [1, 2, 7, 9, 21, 29, 33];
+if (process.argv[4]) pages = process.argv[4].split(',').map(Number);
   for (const n of pages) {
     const page = await doc.getPage(n);
     const buf = await renderPage(page, 1.4);

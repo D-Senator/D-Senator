@@ -6,7 +6,9 @@ const path = require('path');
 const { createCanvas } = require('@napi-rs/canvas');
 const pdfjs = require('pdfjs-dist/legacy/build/pdf.js');
 
-const PDF_PATH = path.join(__dirname, '..', 'ab-fabia-company-profile.pdf');
+const PDF_PATH = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : path.join(__dirname, '..', 'ab-fabia-company-profile-print.pdf');
 
 class NodeCanvasFactory {
   create(width, height) {

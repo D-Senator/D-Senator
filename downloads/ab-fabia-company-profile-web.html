@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<!-- AB-FABIA SERVICE LIMITED — Corporate Profile (web). Derived from the master content source v1.0. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AB-FABIA Service Limited | Integrated EPC &amp; Energy Services</title>
+<meta name="description" content="AB-FABIA SERVICE LIMITED is an indigenous Nigerian integrated engineering, procurement, construction and energy-services company. Est. 2002, Port Harcourt, Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3A; --navy-deep:#071727; --amber:#F5A623; --steel:#6B7A8D;
+  --amber-tint:#FBF0DE; --light-steel:#E8ECF1; --off-white:#F6F8FA;
+  --white:#FFFFFF; --ink:#202A35; --body:#3B4652; --subtle:#5A6B7C; --line:#DCE3EA;
+  --head:'Archivo','Archivo Display',Arial,sans-serif;
+  --sans:'Inter',Arial,Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--body);background:var(--white);line-height:1.6;font-size:16px}
+img,svg{vertical-align:middle}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--head);color:var(--navy);line-height:1.15}
+a{color:inherit;text-decoration:none}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px;max-width:1080px;margin:0 auto}
+.nav .logo text{font-family:var(--head)}
+.nav-links{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.nav-links a{font-size:12px;font-weight:600;color:var(--subtle);white-space:nowrap;padding:8px 10px;border-bottom:2px solid transparent}
+.nav-links a span{color:var(--amber);font-family:var(--head);font-weight:800;margin-right:6px}
+.nav-links a:hover,.nav-links a:active{color:var(--navy);border-bottom-color:var(--amber)}
+@media(max-width:760px){.nav-links{padding-bottom:2px}.nav-links a{padding:8px 6px}}
+
+/* hero */
+.hero{background:var(--navy-deep);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:60px;width:420px;height:420px;opacity:.5;
+  background:
+    linear-gradient(135deg,transparent 46%,rgba(255,255,255,.05) 46% 54%,transparent 54% 60%,rgba(245,166,35,.16) 60% 68%,transparent 68%);}
+.hero-inner{position:relative;padding:96px 24px 84px;max-width:1080px;margin:0 auto}
+.hero .logo{margin-bottom:44px}
+.hero .beam{width:150px;height:7px;background:var(--amber);margin-bottom:28px}
+.hero h1{color:#fff;font-size:clamp(34px,6vw,62px);font-weight:800;letter-spacing:.5px}
+.hero .hero-line{color:#B9C6D4;font-size:clamp(15px,2.2vw,19px);margin-top:18px;font-weight:500}
+.hero .hero-tag{color:#D7DFE8;margin-top:30px;font-weight:600;letter-spacing:.4px}
+.hero .hero-rule{width:80px;height:2px;background:var(--amber);margin:26px 0 0}
+.hero .hero-est{color:#7E8FA3;font-size:13px;letter-spacing:3px;margin-top:64px}
+.hero .hero-est strong{color:#9FB0C2;font-weight:600}
+
+/* contents strip */
+.contents{background:var(--off-white);border-bottom:1px solid var(--line)}
+.contents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px 28px;padding:34px 0}
+.contents-grid a{display:flex;gap:10px;padding:9px 0;font-size:14px;color:var(--body);border-bottom:1px solid var(--line)}
+.contents-grid a span{color:var(--amber);font-family:var(--head);font-weight:800}
+.contents-grid a:hover{color:var(--navy)}
+
+/* sections */
+.section{padding:72px 0;border-bottom:1px solid var(--line)}
+.section:nth-of-type(even){background:var(--off-white)}
+.section-head{margin-bottom:32px}
+.section-num{font-family:var(--head);font-weight:900;color:var(--amber);font-size:15px;letter-spacing:2px}
+.section-head h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin-top:6px;text-transform:uppercase}
+.section-head::after{content:"";display:block;width:52px;height:4px;background:var(--amber);margin-top:14px}
+.section-sub{font-size:13px;font-weight:600;letter-spacing:2px;color:var(--subtle);margin-top:10px;text-transform:uppercase}
+.section p{margin-bottom:14px;max-width:76ch}
+.lead{font-size:18px;font-weight:600;color:var(--navy);line-height:1.5}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--subtle);margin:26px 0 12px}
+.fine{font-size:13px;color:var(--subtle)}
+
+/* chips */
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{background:var(--light-steel);color:var(--navy);font-size:13px;font-weight:600;padding:6px 12px;border-radius:2px;position:relative}
+.chip::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--amber);border-radius:2px 0 0 2px}
+.chip-lg .chip{padding:8px 14px;font-size:14px}
+.chip-amber{background:var(--amber-tint)}
+
+/* statement */
+.statement{background:var(--navy);color:#fff;border-left:5px solid var(--amber);
+  padding:18px 24px;font-family:var(--head);font-weight:600;font-size:18px;margin:30px 0 6px}
+.statement-dark{background:var(--navy-deep)}
+
+/* diagram */
+.diagram{margin:34px 0 8px}
+.diagram-root{background:var(--navy);color:#fff;font-family:var(--head);font-weight:800;
+  text-align:center;padding:12px;border-radius:3px;max-width:280px;margin:0 auto;letter-spacing:1px}
+.diagram-connector{width:2px;height:26px;background:var(--steel);margin:0 auto}
+.diagram-branches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:2px solid var(--steel);padding-top:26px}
+.diagram-branch{background:var(--light-steel);border-top:3px solid var(--amber);border-radius:3px;padding:14px}
+.diagram-branch-name{font-family:var(--head);font-weight:700;color:var(--navy);text-align:center;
+  font-size:14px;letter-spacing:.8px;min-height:40px;display:flex;align-items:center;justify-content:center}
+.diagram-branch ul{list-style:none;margin-top:10px}
+.diagram-branch li{font-size:13px;padding:5px 0 5px 14px;position:relative}
+.diagram-branch li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;background:var(--amber)}
+@media(max-width:700px){.diagram-branches{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{position:relative;margin-top:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--light-steel)}
+.milestone{position:relative;padding:0 0 30px 40px}
+.milestone:last-child{padding-bottom:4px}
+.mile-marker{position:absolute;left:2px;top:7px;width:14px;height:14px;background:var(--amber);border-radius:50%}
+.mile-year{font-family:var(--head);font-weight:900;color:var(--navy);font-size:21px}
+.mile-label{font-size:12px;font-weight:700;letter-spacing:1.6px;color:var(--subtle);text-transform:uppercase;margin:4px 0 8px}
+.milestone p{margin:0;max-width:70ch}
+@media(min-width:900px){
+  .timeline{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+  .timeline::before{left:50%}
+  .milestone:nth-child(odd){grid-column:1;padding-right:44px}
+  .milestone:nth-child(even){grid-column:2;padding-left:44px}
+  .milestone:nth-child(even) .mile-marker{left:auto;right:-6px}
+  .milestone:nth-child(odd) .mile-marker{left:-6px}
+}
+
+/* capability bands */
+.cap-bands{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+.cap-band{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--amber);
+  border-radius:3px;padding:18px 22px;display:grid;grid-template-columns:56px 1fr;gap:14px}
+.section:nth-of-type(even) .cap-band{background:var(--white)}
+.cap-num{font-family:var(--head);font-weight:900;font-size:24px;color:var(--amber)}
+.cap-band h3{font-size:17px;text-transform:uppercase;letter-spacing:.6px}
+.cap-desc{font-size:13px;color:var(--subtle);margin:2px 0 10px}
+.cap-band .chip-row{margin:0}
+@media(max-width:620px){.cap-band{grid-template-columns:1fr;gap:4px}}
+
+/* cards */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--amber);
+  border-radius:3px;padding:18px 20px}
+.card h3{font-size:14px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
+.card p{font-size:14px;margin:0}
+.card-navy{background:var(--navy);border-color:var(--navy);color:#C4CFDB}
+.card-navy h3{color:#fff}
+@media(max-width:860px){.card-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.card-grid{grid-template-columns:1fr}}
+
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:26px 0}
+.four-col .col-card h3{font-size:13px;letter-spacing:1px;border-bottom:2px solid var(--amber);padding-bottom:8px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+.col-card{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:20px 22px}
+.col-card h3{font-size:15px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.col-card ul{list-style:none}
+.col-card li{padding:7px 0 7px 16px;position:relative;font-size:14px;border-bottom:1px solid var(--line)}
+.col-card li:last-child{border-bottom:none}
+.col-card li::before{content:"";position:absolute;left:0;top:13px;width:5px;height:5px;background:var(--amber)}
+.two-list{columns:2;column-gap:24px}
+@media(max-width:820px){.four-col{grid-template-columns:1fr 1fr}.two-list{columns:1}}
+@media(max-width:560px){.four-col,.two-col{grid-template-columns:1fr}}
+
+/* steps */
+.steps{display:flex;flex-direction:column;gap:0;margin-top:26px;border-left:3px solid var(--amber);padding-left:0}
+.step{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:14px 0 14px 22px;position:relative}
+.step::before{content:"";position:absolute;left:-9px;top:22px;width:15px;height:15px;background:var(--navy);
+  border:3px solid var(--amber);border-radius:50%}
+.step-num{font-family:var(--head);font-weight:900;color:var(--amber);font-size:19px}
+.step h3{font-size:15px;letter-spacing:1px;text-transform:uppercase}
+.step p{margin:4px 0 0;font-size:14px}
+
+/* people */
+.people{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.person{display:grid;grid-template-columns:56px 1fr;gap:16px;background:var(--white);
+  border:1px solid var(--line);border-radius:3px;padding:16px 18px}
+.avatar{width:56px;height:56px;background:var(--navy);color:#fff;display:flex;align-items:center;
+  justify-content:center;font-family:var(--head);font-weight:800;font-size:16px;border-radius:3px}
+.person h3{font-size:16px}
+.person .role{font-size:11.5px;font-weight:700;letter-spacing:1.2px;color:var(--subtle);text-transform:uppercase;margin:2px 0 6px}
+.person p{margin:0;font-size:14px}
+@media(max-width:560px){.person{grid-template-columns:1fr}}
+
+/* projects */
+.project-category{margin-top:30px}
+.cat-head{font-size:15px;text-transform:uppercase;letter-spacing:1px;color:var(--navy);
+  border-bottom:2px solid var(--line);padding-bottom:8px;display:flex;gap:12px;align-items:baseline}
+.cat-key{color:var(--amber);font-weight:900}
+.project-card{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--amber);
+  border-radius:3px;padding:18px 22px;margin-top:14px}
+.project-card h4{font-size:17px}
+.project-meta{font-size:12px;font-weight:600;letter-spacing:.6px;color:var(--subtle);text-transform:uppercase;margin:6px 0 10px}
+.project-card p{margin:0;font-size:14.5px}
+.project-outcome{margin-top:10px !important;font-size:13.5px;color:var(--subtle)}
+.project-outcome span{color:var(--navy);font-weight:700;letter-spacing:1px;font-size:11px;margin-right:8px;text-transform:uppercase}
+
+/* clients */
+.client-group{margin-top:24px}
+.client-list{list-style:none;background:var(--white);border:1px solid var(--line);border-radius:3px}
+.client-list li{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding:13px 18px;border-bottom:1px solid var(--line);font-size:15px}
+.client-list li:last-child{border-bottom:none}
+.client-list strong{font-family:var(--head);font-weight:700;color:var(--navy)}
+.client-list span{color:var(--subtle);font-size:13.5px}
+
+/* why */
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:10px;position:relative}
+.reasons::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--amber);transform:translateX(-50%)}
+.reason{padding:26px 0;position:relative}
+.reason-num{font-family:var(--head);font-weight:900;font-size:34px;color:var(--light-steel)}
+.reason h3{font-size:15px;text-transform:uppercase;letter-spacing:.8px;margin:6px 0 8px}
+.reason p{margin:0;font-size:14.5px;max-width:60ch}
+@media(max-width:720px){.reasons{grid-template-columns:1fr}.reasons::before{display:none}}
+
+/* corporate */
+.corp div{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.corp dt{font-size:11px;font-weight:700;letter-spacing:1.4px;color:var(--subtle);text-transform:uppercase;padding-top:3px}
+.corp dd{font-size:15px;font-weight:600;color:var(--navy)}
+@media(max-width:560px){.corp div{grid-template-columns:1fr;gap:2px}}
+.contact-band{background:var(--navy-deep);border-top:4px solid var(--amber);border-radius:3px;
+  padding:26px 28px;margin-top:30px}
+.contact-band .kicker{color:#9FB0C2;margin-top:0}
+.contact-name{color:#fff;font-family:var(--head);font-weight:700;font-size:20px;margin-bottom:8px}
+.corp-light div{border-bottom-color:rgba(255,255,255,.12)}
+.corp-light dt{color:#9FB0C2}
+.corp-light dd{color:#E8ECF1;font-weight:500}
+
+/* footer */
+footer{background:var(--navy-deep);color:#9FB0C2;padding:36px 0;font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .tag{color:#D7DFE8;font-family:var(--head);font-weight:600}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="#top" aria-label="AB-FABIA home">
+<svg class="logo" width="45" height="38" viewBox="0 0 260 220" role="img" aria-label="AB-FABIA Service Limited">
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke="#F5A623" stroke-width="15">
+    <polyline points="108,96 130,66 152,96"/>
+    <polyline points="114,76 130,46 146,76"/>
+  </g>
+  <text x="130" y="140" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="44" letter-spacing="1" fill="#0B1F3A">AB - FABIA</text>
+  <text x="130" y="182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="5" fill="#6B7A8D">SERVICE LIMITED</text>
+</svg></a>
+    <div class="nav-links">
+        <a href="#who-we-are"><span>01</span>Who We Are</a>
+        <a href="#our-story"><span>02</span>Our Story</a>
+        <a href="#our-capabilities"><span>03</span>Our Capabilities</a>
+        <a href="#energy-oilfield"><span>04</span>Energy &amp; Oilfield Services</a>
+        <a href="#epc"><span>05</span>Engineering, Procurement &amp; Construction</a>
+        <a href="#civil-marine"><span>06</span>Civil, Infrastructure &amp; Marine</a>
+        <a href="#surveying"><span>07</span>Surveying &amp; Geomatics</a>
+        <a href="#drilling-fluids"><span>08</span>Drilling Fluids &amp; Technical Products</a>
+        <a href="#how-we-deliver"><span>09</span>How We Deliver</a>
+        <a href="#hse-quality"><span>10</span>HSE, Quality &amp; Field Assurance</a>
+        <a href="#our-people"><span>11</span>Our People</a>
+        <a href="#experience"><span>12</span>Selected Delivery Experience</a>
+        <a href="#clients"><span>13</span>Clients &amp; Industry Relationships</a>
+        <a href="#why"><span>14</span>Why AB-FABIA</a>
+        <a href="#corporate"><span>15</span>Corporate Information</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    
+<svg class="logo" width="68" height="58" viewBox="0 0 260 220" role="img" aria-label="AB-FABIA Service Limited">
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke="#F5A623" stroke-width="15">
+    <polyline points="108,96 130,66 152,96"/>
+    <polyline points="114,76 130,46 146,76"/>
+  </g>
+  <text x="130" y="140" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="44" letter-spacing="1" fill="#FFFFFF">AB - FABIA</text>
+  <text x="130" y="182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="5" fill="#9FB0C2">SERVICE LIMITED</text>
+</svg>
+    <div class="beam"></div>
+    <h1>INTEGRATED EPC<br>&amp; ENERGY SERVICES</h1>
+    <p class="hero-line">Engineering • Procurement • Construction • Energy Services</p>
+    <p class="hero-tag">Precision. Procurement. Performance.</p>
+    <div class="hero-rule"></div>
+    <p class="hero-est"><strong>EST. 2002</strong> &nbsp;·&nbsp; PORT HARCOURT, RIVERS STATE, NIGERIA</p>
+  </div>
+</header>
+
+<div class="contents">
+  <div class="container">
+    <div class="contents-grid">
+      <a href="#who-we-are"><span>01</span>Who We Are</a>
+      <a href="#our-story"><span>02</span>Our Story</a>
+      <a href="#our-capabilities"><span>03</span>Our Capabilities</a>
+      <a href="#energy-oilfield"><span>04</span>Energy &amp; Oilfield Services</a>
+      <a href="#epc"><span>05</span>Engineering, Procurement &amp; Construction</a>
+      <a href="#civil-marine"><span>06</span>Civil, Infrastructure &amp; Marine</a>
+      <a href="#surveying"><span>07</span>Surveying &amp; Geomatics</a>
+      <a href="#drilling-fluids"><span>08</span>Drilling Fluids &amp; Technical Products</a>
+      <a href="#how-we-deliver"><span>09</span>How We Deliver</a>
+      <a href="#hse-quality"><span>10</span>HSE, Quality &amp; Field Assurance</a>
+      <a href="#our-people"><span>11</span>Our People</a>
+      <a href="#experience"><span>12</span>Selected Delivery Experience</a>
+      <a href="#clients"><span>13</span>Clients &amp; Industry Relationships</a>
+      <a href="#why"><span>14</span>Why AB-FABIA</a>
+      <a href="#corporate"><span>15</span>Corporate Information</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <section id="who-we-are" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">01</span>
+        <h2>Who We Are</h2>
+        
+      </header>
+      
+    <p class="lead">AB-FABIA SERVICE LIMITED is an indigenous Nigerian integrated engineering, procurement, construction and energy-services company with capabilities spanning EPC delivery, oilfield services, drilling fluids, technical product supply, civil and infrastructure works, marine services and surveying.</p>
+    <p>The company has developed from a specialist foundation in drilling-chemical procurement and oilfield technical support into a broader integrated delivery organization.</p><p>AB-FABIA combines technical expertise, procurement capability, project execution, field operations and specialist energy services to support clients across demanding industrial and infrastructure environments.</p>
+    <div class="chip-row">
+      <span class="chip chip-amber">One organization</span>
+      <span class="chip chip-amber">Multiple technical capabilities</span>
+      <span class="chip chip-amber">Integrated delivery</span>
+    </div>
+    
+<div class="diagram">
+  <div class="diagram-root">AB-FABIA</div>
+  <div class="diagram-connector" aria-hidden="true"></div>
+  <div class="diagram-branches">
+    
+    <div class="diagram-branch">
+      <div class="diagram-branch-name">EPC</div>
+      <ul><li>Engineering</li><li>Procurement</li><li>Construction</li><li>Commissioning</li></ul>
+    </div>
+    <div class="diagram-branch">
+      <div class="diagram-branch-name">ENERGY</div>
+      <ul><li>Oilfield Services</li><li>Products</li><li>Logistics</li></ul>
+    </div>
+    <div class="diagram-branch">
+      <div class="diagram-branch-name">SPECIALIST TECHNICAL</div>
+      <ul><li>Drilling Fluids</li><li>Surveying</li><li>Marine</li><li>Infrastructure</li></ul>
+    </div>
+  </div>
+</div>
+    <div class="statement">Integrated capability. Specialist expertise. Practical delivery.</div>
+    </div>
+  </section>
+
+  <section id="our-story" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">02</span>
+        <h2>Our Story</h2>
+        <p class="section-sub">FROM SPECIALIST EXPERTISE TO INTEGRATED DELIVERY</p>
+      </header>
+      <div class="timeline">
+      
+      <div class="milestone">
+        <div class="mile-marker" aria-hidden="true"></div>
+        <div class="mile-year">1999</div>
+        <div class="mile-label">SPECIALIST PROCUREMENT FOUNDATION</div>
+        <p>AB-FABIA's roots developed through drilling-chemical procurement and supply, including specialist support to oilfield operations, trading as AB-Fabia Services.</p>
+      </div>
+      <div class="milestone">
+        <div class="mile-marker" aria-hidden="true"></div>
+        <div class="mile-year">2002</div>
+        <div class="mile-label">FORMAL INCORPORATION</div>
+        <p>AB-FABIA SERVICE LIMITED was formally incorporated in Nigeria.</p>
+      </div>
+      <div class="milestone">
+        <div class="mile-marker" aria-hidden="true"></div>
+        <div class="mile-year">DEVELOPMENT</div>
+        <div class="mile-label">EXPANDING TECHNICAL DEPTH</div>
+        <p>The company developed further capability in drilling fluids, mud engineering, technical chemical supply, logistics and associated field support.</p>
+      </div>
+      <div class="milestone">
+        <div class="mile-marker" aria-hidden="true"></div>
+        <div class="mile-year">CAPABILITY INTEGRATION</div>
+        <div class="mile-label">ENGINEERING &amp; INFRASTRUCTURE</div>
+        <p>The organization expanded into broader engineering, construction, infrastructure, marine and surveying capabilities.</p>
+      </div>
+      <div class="milestone">
+        <div class="mile-marker" aria-hidden="true"></div>
+        <div class="mile-year">INTEGRATION</div>
+        <div class="mile-label">BROADER PROFESSIONAL CAPABILITY</div>
+        <p>The capabilities and professional experience associated with the former 1st Support Services organization became part of AB-FABIA's broader corporate capability.</p>
+      </div>
+      <div class="milestone">
+        <div class="mile-marker" aria-hidden="true"></div>
+        <div class="mile-year">TODAY</div>
+        <div class="mile-label">INTEGRATED EPC &amp; ENERGY SERVICES</div>
+        <p>AB-FABIA brings together engineering, procurement, construction, energy services and specialist technical capability within one expanding organization.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="our-capabilities" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">03</span>
+        <h2>Our Capabilities</h2>
+        
+      </header>
+      <p>AB-FABIA's capability is organized around integrated delivery rather than a flat list of disconnected services.</p>
+    <div class="cap-bands">
+      
+      <div class="cap-band">
+        <div class="cap-num">01</div>
+        <div class="cap-main">
+          <h3>ENGINEERING &amp; EPC</h3>
+          <p class="cap-desc">Concept-to-commissioning technical delivery.</p>
+          <div class="chip-row"><span class="chip">Engineering &amp; Design</span><span class="chip">Procurement</span><span class="chip">Project Management</span><span class="chip">Construction</span><span class="chip">Fabrication</span><span class="chip">Installation</span><span class="chip">Commissioning</span><span class="chip">Operations &amp; Maintenance</span></div>
+        </div>
+      </div>
+      <div class="cap-band">
+        <div class="cap-num">02</div>
+        <div class="cap-main">
+          <h3>ENERGY &amp; OILFIELD SERVICES</h3>
+          <p class="cap-desc">Specialist fluids, products and field support.</p>
+          <div class="chip-row"><span class="chip">Drilling Fluids</span><span class="chip">Mud Engineering</span><span class="chip">Drilling / Completion / Workover Fluid Support</span><span class="chip">Technical Chemical Supply</span><span class="chip">Fluid Facilities</span><span class="chip">Field Technical Support</span><span class="chip">Oilfield Logistics</span></div>
+        </div>
+      </div>
+      <div class="cap-band">
+        <div class="cap-num">03</div>
+        <div class="cap-main">
+          <h3>CIVIL &amp; INFRASTRUCTURE</h3>
+          <p class="cap-desc">Land-based construction and public infrastructure.</p>
+          <div class="chip-row"><span class="chip">Earthworks</span><span class="chip">Roads</span><span class="chip">Drainage</span><span class="chip">Buildings</span><span class="chip">Bridges</span><span class="chip">Structural Works</span><span class="chip">Industrial Facilities</span><span class="chip">Water Infrastructure</span></div>
+        </div>
+      </div>
+      <div class="cap-band">
+        <div class="cap-num">04</div>
+        <div class="cap-main">
+          <h3>MARINE &amp; WATERWAYS</h3>
+          <p class="cap-desc">Dredging and marine environment works.</p>
+          <div class="chip-row"><span class="chip">Dredging</span><span class="chip">Piling</span><span class="chip">Reclamation</span><span class="chip">Canalization</span><span class="chip">Shore Protection</span><span class="chip">Marine Structures</span><span class="chip">Hydrological Services</span></div>
+        </div>
+      </div>
+      <div class="cap-band">
+        <div class="cap-num">05</div>
+        <div class="cap-main">
+          <h3>SURVEYING &amp; GEOMATICS</h3>
+          <p class="cap-desc">Field information for planning and execution.</p>
+          <div class="chip-row"><span class="chip">Topographic Surveying</span><span class="chip">Hydrographic Surveying</span><span class="chip">Route Surveying</span><span class="chip">Positioning</span><span class="chip">Related Field Survey Services</span></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="energy-oilfield" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">04</span>
+        <h2>Energy &amp; Oilfield Services</h2>
+        
+      </header>
+      <p class="lead">AB-FABIA combines specialist oilfield knowledge with procurement, technical support, logistics and field execution capability.</p>
+    <div class="card-grid">
+      
+      <div class="card">
+        <h3>DRILLING FLUIDS &amp; MUD ENGINEERING</h3>
+        <p>Fluid formulation, technical support, mud-engineering services and field operations.</p>
+      </div>
+      <div class="card">
+        <h3>CHEMICAL SUPPLY</h3>
+        <p>Drilling, completion and workover chemical products supported by technical knowledge of their application.</p>
+      </div>
+      <div class="card">
+        <h3>FLUID FACILITIES</h3>
+        <p>Mud and bulk facilities, storage, mixing, filtration and related field-support infrastructure where applicable.</p>
+      </div>
+      <div class="card">
+        <h3>TECHNICAL FIELD SUPPORT</h3>
+        <p>Practical technical support for demanding drilling and oilfield environments.</p>
+      </div>
+      <div class="card">
+        <h3>LOGISTICS &amp; SUPPLY</h3>
+        <p>Procurement, materials coordination, storage and operational logistics.</p>
+      </div>
+      <div class="card card-navy">
+        <h3>Supporting Facilities</h3>
+        <p>Supporting infrastructure includes a mud and bulk plant at Onne, a mud laboratory with field kits and units, warehouses in Port Harcourt and associated materials-handling equipment.</p>
+      </div>
+    </div>
+    <div class="statement">Specialist technical knowledge supported by practical field capability.</div>
+    </div>
+  </section>
+
+  <section id="epc" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">05</span>
+        <h2>Engineering, Procurement &amp; Construction</h2>
+        
+      </header>
+      <p>AB-FABIA integrates engineering, procurement and project execution to provide clients with coordinated delivery from concept and planning through construction, commissioning and operational support.</p>
+    <div class="four-col">
+      
+      <div class="col-card">
+        <h3>ENGINEERING</h3>
+        <ul><li>Civil</li><li>Structural</li><li>Mechanical</li><li>Chemical / Process</li><li>Project Engineering</li><li>Technical Planning</li></ul>
+      </div>
+      <div class="col-card">
+        <h3>PROCUREMENT</h3>
+        <ul><li>Materials sourcing</li><li>Vendor coordination</li><li>Supply-chain management</li><li>Technical procurement</li><li>Logistics coordination</li></ul>
+      </div>
+      <div class="col-card">
+        <h3>CONSTRUCTION</h3>
+        <ul><li>Site development</li><li>Civil works</li><li>Structural works</li><li>Facilities</li><li>Industrial construction</li><li>Fabrication</li><li>Installation</li></ul>
+      </div>
+      <div class="col-card">
+        <h3>PROJECT DELIVERY</h3>
+        <ul><li>Planning</li><li>Coordination</li><li>Supervision</li><li>Quality control</li><li>HSE oversight</li><li>Commissioning</li><li>Handover</li></ul>
+      </div>
+    </div>
+    <div class="statement">Engineering decisions, procurement discipline and field execution working as one delivery system.</div>
+    </div>
+  </section>
+
+  <section id="civil-marine" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">06</span>
+        <h2>Civil, Infrastructure &amp; Marine</h2>
+        
+      </header>
+      <div class="two-col">
+      
+      <div class="col-card ">
+        <h3>CIVIL &amp; INFRASTRUCTURE</h3>
+        <ul class="two-list"><li>Earthworks</li><li>Roads</li><li>Drainage</li><li>Water systems</li><li>Buildings</li><li>Bridges</li><li>Industrial facilities</li><li>Structural works</li></ul>
+      </div>
+      <div class="col-card card-navy">
+        <h3>MARINE &amp; WATERWAYS</h3>
+        <ul class="two-list"><li>Dredging</li><li>Piling</li><li>Reclamation</li><li>Canalization</li><li>Sand stockpiling</li><li>Shore protection</li><li>Jetties</li><li>Marine structures</li><li>Hydrological services</li></ul>
+      </div>
+    </div>
+    <div class="statement">The capability developed through the integrated technical organization allows AB-FABIA to work across land-based, industrial and marine environments.</div>
+    </div>
+  </section>
+
+  <section id="surveying" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">07</span>
+        <h2>Surveying &amp; Geomatics</h2>
+        
+      </header>
+      <p>Surveying supports AB-FABIA's engineering, infrastructure, marine and construction activities by providing field information required for planning, design, positioning and execution.</p>
+    <div class="chip-row"><span class="chip chip-amber">Current active service line</span></div>
+    <div class="two-col">
+      <div class="col-card card-navy">
+        <h3>Capabilities</h3>
+        <ul><li>Topographic Survey</li><li>Hydrographic Survey</li><li>Route Survey</li><li>Positioning</li><li>Field Data Collection</li><li>Engineering Survey Support</li></ul>
+      </div>
+      <div class="col-card">
+        <h3>Applications</h3>
+        <ul><li>Infrastructure</li><li>Roads</li><li>Marine Works</li><li>Construction</li><li>Site Development</li><li>Engineering Planning</li></ul>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="drilling-fluids" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">08</span>
+        <h2>Drilling Fluids &amp; Technical Products</h2>
+        
+      </header>
+      <p class="lead">One of AB-FABIA's major specialist strengths is its technical depth in drilling, completion and workover fluid systems.</p>
+    <h3 class="kicker">Product families</h3>
+    <div class="chip-row chip-lg">
+      <span class="chip">Weighting Agents</span><span class="chip">Viscosifiers &amp; Rheology Modifiers</span><span class="chip">Fluid-Loss Control Materials</span><span class="chip">Lubricants</span><span class="chip">Shale / Formation Control</span><span class="chip">Lost-Circulation Materials</span><span class="chip">Biocides</span><span class="chip">Corrosion Inhibitors</span><span class="chip">Defoamers</span><span class="chip">Brines &amp; Salts</span><span class="chip">Drill-In Fluid Systems</span><span class="chip">Completion &amp; Workover Products</span><span class="chip">Specialty Chemicals</span>
+    </div>
+    <div class="note-amber">
+      <strong>Technical documentation</strong>
+      <p>Detailed product specifications, technical data and application information are available through AB-FABIA's technical and product documentation.</p>
+    </div>
+    <div class="statement">Specialist strength within an integrated EPC and energy-services company.</div>
+    </div>
+  </section>
+
+  <section id="how-we-deliver" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">09</span>
+        <h2>How We Deliver</h2>
+        
+      </header>
+      <div class="steps">
+      
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>UNDERSTAND</h3>
+          <p>Client requirement, operating environment and delivery objectives.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>ENGINEER</h3>
+          <p>Technical assessment, planning, design and solution development.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>PROCURE</h3>
+          <p>Materials, equipment, specialist products and supply-chain coordination.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>EXECUTE</h3>
+          <p>Construction, installation, field operations and technical delivery.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <h3>CONTROL</h3>
+          <p>Project supervision, HSE, QA/QC and execution monitoring.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">06</div>
+        <div class="step-body">
+          <h3>COMMISSION</h3>
+          <p>Testing, completion, handover and technical close-out.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">07</div>
+        <div class="step-body">
+          <h3>SUPPORT</h3>
+          <p>Operations, maintenance and technical support where required.</p>
+        </div>
+      </div>
+    </div>
+    <div class="statement">AB-FABIA's integrated model reduces fragmentation between technical planning, procurement and field execution.</div>
+    </div>
+  </section>
+
+  <section id="hse-quality" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">10</span>
+        <h2>HSE, Quality &amp; Field Assurance</h2>
+        
+      </header>
+      <p>Safe, controlled and technically responsible execution is integral to AB-FABIA project delivery.</p>
+    <div class="two-col">
+      <div class="col-card"><h3>HSE</h3><ul><li>Site safety</li><li>Risk awareness</li><li>Environmental responsibility</li><li>Field supervision</li><li>Operational discipline</li></ul></div>
+      <div class="col-card"><h3>Quality</h3><ul><li>Technical compliance</li><li>Inspection</li><li>QA/QC oversight</li><li>Specification control</li><li>Field verification</li><li>Supervision</li></ul></div>
+    </div>
+    <div class="statement statement-dark">"Field teams maintain active project supervision and execution oversight."</div>
+    <p class="fine">Verified certifications and registrations are published as they are issued.</p>
+    </div>
+  </section>
+
+  <section id="our-people" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">11</span>
+        <h2>Our People</h2>
+        
+      </header>
+      <p class="lead">AB-FABIA's capability is built around an integrated team of experienced professionals whose combined technical, commercial and operational expertise supports project delivery.</p>
+    <p class="kicker">Company capability first. People as evidence of that capability.</p>
+    <div class="people">
+      
+      <div class="person">
+        <div class="avatar" aria-hidden="true">ABI</div>
+        <div class="person-main">
+          <h3>Ayini Basil Iyalla</h3>
+          <p class="role">Managing Director / CEO</p>
+          <p>Leads the company he established from a specialist drilling-chemical supply base in 1999. More than two decades of procurement and supply experience across oilfield operations, with an academic and chartered management background.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">ETA</div>
+        <div class="person-main">
+          <h3>Edward Tamunobelem Alabo</h3>
+          <p class="role">General Manager</p>
+          <p>Drilling-fluids professional with more than two decades of senior mud-engineering experience, including roles with major international oilfield service companies. Holds degrees in industrial chemistry and project management.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">DG</div>
+        <div class="person-main">
+          <h3>David Gelsthorpe</h3>
+          <p class="role">Executive Director, Finance / Admin</p>
+          <p>Chartered accountant with more than twenty years of finance and taxation experience across the oil and gas, construction and logistics industries, serving at management and board levels.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">JT</div>
+        <div class="person-main">
+          <h3>Joyce Tawiyah</h3>
+          <p class="role">Consulting Partner</p>
+          <p>Trained drilling-fluids professional specializing in drilling and completion fluids, oilfield chemical testing and operational reliability in the Nigerian energy sector.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">DOO</div>
+        <div class="person-main">
+          <h3>Dike Orji Okiwe</h3>
+          <p class="role">Operations Manager</p>
+          <p>Engineer with more than twenty years of experience across oil production, marine operations engineering, construction and project management, with qualifications in chemical, petroleum and logistics engineering.</p>
+        </div>
+      </div>
+    </div>
+    <h3 class="kicker">Technical &amp; professional strength</h3>
+    <div class="chip-row"><span class="chip">Civil Engineering</span><span class="chip">Structural Engineering</span><span class="chip">Drilling Fluids &amp; Oilfield Services</span><span class="chip">Marine &amp; Infrastructure</span><span class="chip">Surveying &amp; Geomatics</span><span class="chip">Project Management</span><span class="chip">Finance &amp; Commercial</span><span class="chip">Operations &amp; Logistics</span><span class="chip">HSE / QA / QC</span></div>
+    <p class="fine">The organization's current professional capability also incorporates relevant technical experience developed through the former 1st Support Services organization following its integration into AB-FABIA.</p>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">12</span>
+        <h2>Selected Delivery Experience</h2>
+        
+      </header>
+      <p>AB-FABIA's experience spans engineering, construction, oilfield technical services, chemical supply, infrastructure and related specialist delivery.</p>
+    
+    <div class="project-category">
+      <h3 class="cat-head"><span class="cat-key">A</span> EPC / CONSTRUCTION</h3>
+      
+      <div class="project-card">
+        <h4>Staff Quarters, Oshie Oilfield</h4>
+        <p class="project-meta">Oando (formerly Nigerian Agip) · Oshie Oilfield</p>
+        <p>Design and construction of staff quarters, including civil and structural works, building services and site development to support field operations.</p>
+        <p class="project-outcome"><span>Outcome</span> Quality staff accommodation delivered on target and on budget.</p>
+      </div>
+    </div>
+    <div class="project-category">
+      <h3 class="cat-head"><span class="cat-key">B</span> DRILLING / MUD ENGINEERING</h3>
+      
+      <div class="project-card">
+        <h4>Idu 1 &amp; Idu 6, Mud Engineering Support</h4>
+        <p class="project-meta">NAOC, in partnership with Baroid Drilling Fluids · Joint mud engineering support (70:30) · Idu Oilfield, Bayelsa State · 2003 - 2005</p>
+        <p>Joint mud engineering support with Baroid Drilling Fluids for the drilling and completion of the Idu 1 and Idu 6 wells.</p>
+        <p class="project-outcome"><span>Outcome</span> Both wells drilled and completed to production readiness.</p>
+      </div>
+    </div>
+    <div class="project-category">
+      <h3 class="cat-head"><span class="cat-key">C</span> CHEMICAL SUPPLY / TECHNICAL SUPPORT</h3>
+      
+      <div class="project-card">
+        <h4>Drilling Chemicals Supply</h4>
+        <p class="project-meta">Nigerian Agip Oil Company (NAOC) · Niger Delta · Since 1999</p>
+        <p>Major single-source procurement and supply of drilling chemicals, sustained as a trusted relationship over more than two decades.</p>
+        <p class="project-outcome"><span>Outcome</span> A supply partnership maintained with one of Nigeria’s leading operators since 1999.</p>
+      </div>
+      <div class="project-card">
+        <h4>Drilling Fluid Products Supply</h4>
+        <p class="project-meta">Geo-Fluids Limited, serving Total E&amp;P operations · Supply relationship through Geo-Fluids Limited · Total E&amp;P operations · 2000 - 2005</p>
+        <p>Supplied Geo-Fluids Limited, an indigenous mud engineering service company, with the products required for its operations at Total E&amp;P.</p>
+        <p class="project-outcome"><span>Outcome</span> Established AB-FABIA among the foremost indigenous mud engineering supply companies of the period.</p>
+      </div>
+    </div>
+    <div class="project-category">
+      <h3 class="cat-head"><span class="cat-key">D</span> INFRASTRUCTURE / MARINE</h3>
+      
+      <div class="project-card">
+        <h4>Mbiama / Akinima Road</h4>
+        <p class="project-meta">Rivers State Government · Mbiama / Akinima, Rivers State</p>
+        <p>Road construction works, including earthworks, drainage, surfacing and quality control, improving access and connectivity for communities and commerce.</p>
+        <p class="project-outcome"><span>Outcome</span> Durable road infrastructure delivered for the Rivers State Government.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="clients" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">13</span>
+        <h2>Clients &amp; Industry Relationships</h2>
+        
+      </header>
+      <p>AB-FABIA's experience has developed through relationships across oil and gas, industrial, public-sector and infrastructure environments.</p>
+    
+    <div class="client-group">
+      <h3 class="kicker">DIRECT CLIENTS</h3>
+      <ul class="client-list">
+        <li><strong>Rivers State Government</strong><span>Public-sector infrastructure</span></li><li><strong>Nigerian Agip Oil Company (NAOC)</strong><span>Drilling chemical supply since 1999</span></li><li><strong>Oando</strong><span>Construction, Oshie Oilfield</span></li><li><strong>Geo-Fluids Limited</strong><span>Drilling fluid products supply</span></li><li><strong>Nubian Nigeria Limited</strong><span>Oil and gas services</span></li>
+      </ul>
+    </div>
+    <div class="client-group">
+      <h3 class="kicker">SUPPLY / TECHNICAL RELATIONSHIP</h3>
+      <ul class="client-list">
+        <li><strong>Total E&amp;P</strong><span>Served through supply to Geo-Fluids Limited (2000 - 2005)</span></li>
+      </ul>
+    </div>
+    <div class="client-group">
+      <h3 class="kicker">CONTRACTOR / PARTNER RELATIONSHIP</h3>
+      <ul class="client-list">
+        <li><strong>Baroid Drilling Fluids</strong><span>Joint mud engineering support, Idu Oilfield (2003 - 2005)</span></li>
+      </ul>
+    </div>
+    <p class="fine">Relationships are stated as direct or through intermediaries exactly as the delivery record supports.</p>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">14</span>
+        <h2>Why AB-FABIA</h2>
+        
+      </header>
+      <div class="reasons">
+      
+      <div class="reason">
+        <div class="reason-num">01</div>
+        <h3>PROVEN INDUSTRY FOUNDATION</h3>
+        <p>More than two decades of development and experience across specialist energy and engineering environments.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">02</div>
+        <h3>INTEGRATED DELIVERY</h3>
+        <p>Engineering, procurement, construction, technical services and project execution connected within one organization.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">03</div>
+        <h3>SPECIALIST DRILLING-FLUID EXPERTISE</h3>
+        <p>Deep technical capability supported by a broad drilling, completion and workover product portfolio.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">04</div>
+        <h3>BROAD ENGINEERING CAPABILITY</h3>
+        <p>Civil, structural, mechanical, infrastructure, marine and surveying competence.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">05</div>
+        <h3>PRACTICAL FIELD EXPERIENCE</h3>
+        <p>Technical capability supported by operational and site-level execution.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">06</div>
+        <h3>LOCAL TECHNICAL STRENGTH</h3>
+        <p>An expanding Nigerian professional and operational workforce.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">07</div>
+        <h3>ADAPTABLE DELIVERY</h3>
+        <p>Capability spanning specialist oilfield requirements and broader engineering, construction and infrastructure environments.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="corporate" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">15</span>
+        <h2>Corporate Information</h2>
+        
+      </header>
+      <div class="two-col">
+    <div>
+      <h3 class="kicker">AB-FABIA Service Limited</h3>
+      <dl class="corp">
+        <div><dt>Established</dt><dd>2002</dd></div>
+        <div><dt>Head office</dt><dd>Port Harcourt, Rivers State, Nigeria</dd></div>
+        <div><dt>Core positioning</dt><dd>Integrated EPC &amp; Energy Services</dd></div>
+        <div><dt>Specialist strength</dt><dd>Drilling Fluids &amp; Technical Products</dd></div>
+        <div><dt>Registration</dt><dd>Registered and incorporated in Nigeria (2002).</dd></div>
+        <div><dt>Certifications</dt><dd>Verified certifications and registrations are published as they are issued.</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h3 class="kicker">Services</h3>
+      <div class="chip-row chip-lg"><span class="chip">Engineering</span><span class="chip">Procurement</span><span class="chip">Construction</span><span class="chip">Energy Services</span><span class="chip">Drilling Fluids</span><span class="chip">Technical Products</span><span class="chip">Civil &amp; Infrastructure</span><span class="chip">Marine</span><span class="chip">Surveying &amp; Geomatics</span></div>
+    </div>
+  </div>
+  <div class="contact-band">
+    <h3 class="kicker">Contact</h3>
+    <p class="contact-name">AB-FABIA SERVICE LIMITED</p>
+    <dl class="corp corp-light">
+      <div><dt>Address</dt><dd>Circular Road, Close 7, Block 6, Flat 4, Elekiahia Housing Estate, Port Harcourt, Rivers State, Nigeria</dd></div>
+      <div><dt>Phone</dt><dd>0803 312 6259</dd></div>
+      <div><dt>Email</dt><dd>fabai@live.com  ·  info@ab-fabia.com</dd></div>
+      <div><dt>Website</dt><dd>ab-fabia.com</dd></div>
+    </dl>
+  </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <div>
+<svg class="logo" width="40" height="34" viewBox="0 0 260 220" role="img" aria-label="AB-FABIA Service Limited">
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke="#F5A623" stroke-width="15">
+    <polyline points="108,96 130,66 152,96"/>
+    <polyline points="114,76 130,46 146,76"/>
+  </g>
+  <text x="130" y="140" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="44" letter-spacing="1" fill="#FFFFFF">AB - FABIA</text>
+  <text x="130" y="182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="5" fill="#9FB0C2">SERVICE LIMITED</text>
+</svg><br><br>AB-FABIA SERVICE LIMITED · EST. 2002 · PORT HARCOURT, NIGERIA</div>
+    <div class="tag">Precision. Procurement. Performance.</div>
+  </div>
+</footer>
+
+</body>
+</html>

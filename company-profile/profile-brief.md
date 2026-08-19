@@ -118,6 +118,27 @@
 - [ ] Leadership photos (placeholders in place)
 - [ ] Certifications when issued
 
+## Build status (v6 — MASTER BUILD v1.0: 4 formats, one content source)
+- **Positioning (v1.0, supersedes v5 note above):** Integrated EPC & Energy Services company;
+  Drilling Fluids & Technical Products presented as a major specialist strength (not the flagship).
+- **Single source of truth:** `company-profile/content/master-content.js` — all four outputs derive from it.
+- Print PDF: `company-profile/ab-fabia-company-profile-print.pdf` (17 pages, A4, 19 mm margins,
+  auto page numbers, contents synced to final pagination; layout QA + print-frame checks pass).
+- Web: `company-profile/ab-fabia-company-profile-web.html` (responsive, no JS, same brand system).
+- Email: `company-profile/ab-fabia-company-profile-email.html` (640 px tables, inline CSS, email-safe;
+  subject + preheader documented in the file header).
+- Editable: `company-profile/ab-fabia-company-profile-editable.docx` (A4, Archivo Display headings,
+  Inter body, editable tables/TOC with auto page numbers, logo as editable image object).
+- Builds: `node scripts/build-print.js | build-web.js | build-email.js | build-docx.js`
+  QA: `node scripts/layout-qa.js`, `node scripts/check-margins.js`, `node scripts/render-previews.js`.
+- v5 outputs archived under `company-profile/archive-v5/`; `downloads/` now carries the v1.0 set.
+- **Flag (Rule 03):** product lists intended for the `AI-Arena` branch were not present there at build
+  time (branch tip identical to `main`, commit b69b45a). The profile therefore publishes only the
+  13 locked product families; the detailed product catalogue remains a separate document awaiting
+  the uploaded lists.
+- **Flag (Rule 09/12):** v5 "At a Glance" size numbers (20+/10+/10+) intentionally dropped from v1.0;
+  no certifications claimed ("published as issued").
+
 ## Build status (v5 — off-page text fixed + editable Word version)
 - Logo: brand/logo/ab-fabia-logo.svg + .png — Concept B (two ascending amber chevrons + "AB - FABIA" wordmark)
 - Brand board: brand/ab-fabia-brand-board.pdf

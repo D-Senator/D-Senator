@@ -8,8 +8,10 @@ const DIR = path.join(__dirname, '..', '..', 'downloads');
 const PORT = process.env.PORT || 4173;
 
 const FILES = [
-  { file: 'ab-fabia-company-profile.pdf', label: 'Company Profile — Print-ready PDF', desc: '33-page A4 profile, final design' },
-  { file: 'ab-fabia-company-profile.docx', label: 'Company Profile — Editable Word', desc: 'Open in Word to edit text & insert photos' },
+  { file: 'ab-fabia-company-profile-print.pdf', label: 'Company Profile v1.0 — Print PDF', desc: '17-page A4 corporate capability profile' },
+  { file: 'ab-fabia-company-profile-editable.docx', label: 'Company Profile v1.0 — Editable Word', desc: 'A4, editable headings, tables, TOC & logo' },
+  { file: 'ab-fabia-company-profile-web.html', label: 'Company Profile v1.0 — Web', desc: 'Responsive single-file webpage' },
+  { file: 'ab-fabia-company-profile-email.html', label: 'Company Profile v1.0 — Email', desc: 'Email-safe HTML introduction' },
   { file: 'ab-fabia-brand-board.pdf', label: 'Brand Board — PDF', desc: 'Logo, colors & typography at a glance' },
   { file: 'ab-fabia-logo.png', label: 'Logo — High-res PNG', desc: 'For web, slides & documents' },
   { file: 'ab-fabia-logo.svg', label: 'Logo — Vector SVG', desc: 'For print & professional design' },
